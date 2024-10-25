@@ -15,8 +15,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:label="@string/title_activity_main"
-            android:theme="@style/Theme.LearningQuizApp" />
+            android:label="FPTU Learning Quiz App"
+            android:theme="@style/Theme.LearningQuizApp.CustomActionBar"/>
         <activity
             android:name=".SplashScreen"
             android:exported="true">
