@@ -7,7 +7,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/logo"
-        android:label="@string/app_name"
+        android:label="myEdunext"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.LearningQuizApp"
@@ -15,7 +15,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"
-            android:label="FPTU Learning Quiz App"
+            android:label="FPTU Edunext Application"
             android:theme="@style/Theme.LearningQuizApp.CustomActionBar"/>
         <activity
             android:name=".SplashScreen"
