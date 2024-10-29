@@ -9,13 +9,13 @@
         android:label="Home"
         android:name="vn.edu.fpt.learningquizapp.ui.home.HomeFragment"
         tools:layout="@layout/fragment_home" />
-    <fragment android:id="@+id/code"
-        android:label="Code"
-        android:name="vn.edu.fpt.learningquizapp.ui.code.CodeFragment"
-        tools:layout="@layout/fragment_code" />
-    <fragment android:id="@+id/quiz"
-        android:label="Quiz"
-        android:name="vn.edu.fpt.learningquizapp.ui.quiz.QuizFragment"
-        tools:layout="@layout/fragment_quiz" />
+    <fragment android:id="@+id/notification"
+        android:label="Notification"
+        android:name="vn.edu.fpt.learningquizapp.ui.notification.NotificationFragment"
+        tools:layout="@layout/fragment_notification" />
+    <fragment android:id="@+id/profile"
+        android:label="Profile"
+        android:name="vn.edu.fpt.learningquizapp.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>

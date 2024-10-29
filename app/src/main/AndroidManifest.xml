@@ -10,10 +10,10 @@
         android:label="myEdunext"
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LearningQuizApp"
+        android:theme="@style/Theme.LearningQuizApp.CustomActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".TopicActivity"
+            android:name=".chaptertopics.TopicActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.Design.NoActionBar"

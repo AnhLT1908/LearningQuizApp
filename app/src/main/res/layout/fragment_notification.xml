@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.quiz.QuizFragment">
+    tools:context=".ui.notification.NotificationFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Quiz Fragment" />
+        android:scaleType="centerInside"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:src="@drawable/fpt_logo"/>
 
 </FrameLayout>

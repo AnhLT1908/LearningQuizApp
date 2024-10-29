@@ -44,6 +44,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/PRM392"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="3dp"
@@ -75,6 +76,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/MLN122"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="3dp"
@@ -106,6 +108,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/FER202"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="3dp"
@@ -137,6 +140,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/HCM202"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="3dp"

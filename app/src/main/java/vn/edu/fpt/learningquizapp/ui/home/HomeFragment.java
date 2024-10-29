@@ -11,73 +11,42 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import vn.edu.fpt.learningquizapp.R;
-import vn.edu.fpt.learningquizapp.TopicActivity;
+import vn.edu.fpt.learningquizapp.chaptertopics.TopicActivity;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class HomeFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public HomeFragment() {
-        // Required empty public constructor
-    }
-
     CardView SDN302;
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    CardView PRM392;
+    CardView MLN122;
+    CardView FER202;
+    CardView HCM202;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        // Initialize CardViews
         SDN302 = view.findViewById(R.id.SDN302);
+        PRM392 = view.findViewById(R.id.PRM392);
+        MLN122 = view.findViewById(R.id.MLN122);
+        FER202 = view.findViewById(R.id.FER202);
+        HCM202 = view.findViewById(R.id.HCM202);
 
-        SDN302.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getContext(), TopicActivity.class);
-                startActivity(intent);
-            }
-        });
+        // Set click listeners for each topic, passing data to TopicActivity
+        SDN302.setOnClickListener(view1 -> openTopicActivity("SDN302", R.drawable.nodeexpress));
+        PRM392.setOnClickListener(view1 -> openTopicActivity("PRM392", R.drawable.androidlogo));
+        MLN122.setOnClickListener(view1 -> openTopicActivity("MLN122", R.drawable.maclenin));
+        FER202.setOnClickListener(view1 -> openTopicActivity("FER202", R.drawable.reactjs));
+        HCM202.setOnClickListener(view1 -> openTopicActivity("HCM202", R.drawable.hochiminh));
 
-        // Inflate the layout for this fragment
         return view;
+    }
+
+    private void openTopicActivity(String title, int imageResId) {
+        Intent intent = new Intent(getContext(), TopicActivity.class);
+        intent.putExtra("TITLE", title);
+        intent.putExtra("IMAGE_RES_ID", imageResId);
+        startActivity(intent);
     }
 }

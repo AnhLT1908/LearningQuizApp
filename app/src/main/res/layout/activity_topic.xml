@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TopicActivity">
+    tools:context=".chaptertopics.TopicActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,17 +15,18 @@
             android:layout_height="275dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:expandedTitleGravity="end|top"
+            app:expandedTitleTextAppearance="@style/SmallBoldExpandedTitle"
             android:fitsSystemWindows="true">
-            
+
             <ImageView
+                android:id="@+id/topic_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="275dp"
-                android:src="@drawable/nodeexpress"
                 android:scaleType="centerCrop"
                 app:layout_collapseMode="parallax"
-                android:contentDescription="SDN302"/>
-            
+                android:contentDescription="Topic Image"/>
+
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
@@ -35,5 +36,32 @@
                 android:id="@+id/toolbar"/>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="#f1f1f1"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/topics_name"
+                android:horizontalSpacing="7dp"
+                android:verticalSpacing="10dp"
+                android:isScrollContainer="false"
+                android:columnWidth="100dp"
+                android:stretchMode="columnWidth"
+                android:numColumns="2"/>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
